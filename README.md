@@ -352,32 +352,32 @@ In Objective-C, there are six comparison operators available to use. Most of the
 To capture the result of each of these comparisons into a `BOOL`, our implementation might look something like this: 
 
 ```objc
-BOOL isEqualTo              = 7 == 7;
-BOOL isNotEqualTo           = 7 != 8;
-BOOL isLessThan             = 5 < 7;
-BOOL isLessThanOrEqualTo    = 7.0 <= 7;
-BOOL isGreaterThan          = 8 > 7;
-BOOL isGreaterThanOrEqualTo = 7.0 >= 7;
+BOOL sevenIsEqualToSeven              = 7 == 7;
+BOOL sevenIsNotEqualToEight           = 7 != 8;
+BOOL fiveIsLessThanSeven              = 5 < 7;
+BOOL sevenIsLessThanOrEqualToSeven    = 7.0 <= 7;
+BOOL eightIsGreaterThanSeven          = 8 > 7;
+BOOL sevenIsGreaterThanOrEqualToSeven = 7.0 >= 7;
 ```
 We can then use `NSLog()` to print the values to the console:
 
 ```objc
-NSLog(@"isEqualTo: %d", isEqualTo);
-NSLog(@"isNotEqualTo: %d", isNotEqualTo);
-NSLog(@"isLessThan: %d", isLessThan);
-NSLog(@"isLessThanOrEqualTo: %d", isLessThanOrEqualTo);
-NSLog(@"isGreaterThan: %d", isGreaterThan);
-NSLog(@"isGreaterThanOrEqualTo: %d", isGreaterThanOrEqualTo);
+NSLog(@"sevenIsEqualToSeven: %d", sevenIsEqualToSeven);
+NSLog(@"sevenIsNotEqualToEight: %d", sevenIsNotEqualToEight);
+NSLog(@"fiveIsLessThanSeven: %d", fiveIsLessThanSeven);
+NSLog(@"sevenIsLessThanOrEqualToSeven: %d", sevenIsLessThanOrEqualToSeven);
+NSLog(@"eightIsGreaterThanSeven: %d", eightIsGreaterThanSeven);
+NSLog(@"sevenIsGreaterThanOrEqualToSeven: %d", sevenIsGreaterThanOrEqualToSeven);
 ```
 This will print:
 
 ```
-isEqualTo: 1
-isNotEqualTo: 1
-isLessThan: 1
-isLessThanOrEqualTo: 1
-isGreaterThan: 1
-isGreaterThanOrEqualTo: 1
+sevenIsEqualToSeven: 1
+sevenIsNotEqualToEight: 1
+fiveIsLessThanSeven: 1
+sevenIsLessThanOrEqualToSeven: 1
+eightIsGreaterThanSeven: 1
+sevenIsGreaterThanOrEqualToSeven: 1
 ```
 
 ### Operation Precedence
