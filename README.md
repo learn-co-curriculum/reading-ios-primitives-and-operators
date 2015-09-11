@@ -182,7 +182,7 @@ In Objective-C, the symbols for these operators are:
 | `/` | Division Operator       | "slash" or "over"     | Results to the **quotient** of dividing the left operand by the right operand. **Note:** *This operator truncates integer-only divisions.* |
 | `%` | **Advanced:** Modulus or Modulo       | "modulus" or "modulo" | Results to the **remainder** of dividing the right operand by the left operand. **Note:** *This does not perform the strict mathematical definition of modulus.* |
 
-**Note:** *Exponent calculations are performed using the* `pow()` *function from C's* `math.h` *library.*
+**Note:** *Exponent calculations are performed using the* `pow()` *function from C's* `math.h` *library. The* `^` *operator has a different use than exponents.*
 
 We can assign variables to the results of an operation, and we can combine the printouts of a series of variables into a single `NSLog()`:
 
