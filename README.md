@@ -29,11 +29,11 @@ Every commonly-used programming language has the capability of performing simple
 | Primitive   | Description |
 |:-----------:|:------------|
 | `NSInteger` | An integer value that can be either positive or negative. |
-| `NSUInteger`| An integer value that can **only** be positive (the "U" means "unsigned"). |
+| `NSUInteger`| An integer value that can **only** be zero or positive (the "U" means "unsigned"). |
 | `CGFloat`   | A "float" value that can (imperfectly) hold a decimal point. **Note:** *Do not use float values to hold currency.* |
 | `BOOL`      | A `YES` or `NO` value: `0` means "no", `1` means "yes" |
 
-**Advanced:** *Do not use a* `*` *when declaring primitives. Entering* `NSInteger *` *will cause the compiler to generate an* `invalid integer to pointer conversion` *warning. The same goes for declaring any of the data types. This syntax does serve a purpose so the language permits it, but your application won't do what you expect.*
+**Advanced:** *Do not use a* `*` *when declaring primitives. Assigning an integer to* `NSInteger *` *will cause the compiler to generate an* `invalid integer to pointer conversion` *warning. The same goes for declaring any of the data types. This syntax does serve a purpose so the language permits it, but your application won't do what you expect.*
 
 
 ### Declaring Primitives
@@ -170,7 +170,7 @@ isTrue: 0
 
 Just as you would expect, the four mathematical operators can be used to perform simple calculations. The variables or values on either side of the operator are called the "operands", and are the two values with which the calculation will be performed. 
 
-**Advanced:** *In addition, the modulus operator can be used to calculate the remainder of clocking the left operand around the right operand. It is included here for completeness.*
+**Advanced:** *In addition, the modulus operator can be used to calculate the remainder of dividing the right operand by the left operand. It is included here for completeness.*
 
 In Objective-C, the symbols for these operators are:
 
@@ -180,7 +180,9 @@ In Objective-C, the symbols for these operators are:
 | `-` | Subtraction Operator    | "minus" or "subtract" | Results to the **difference** of subtracting the right operand from the left operand.  |
 | `*` | Multiplication Operator | "star" or "times"     | Results to the **product** of multiplying the two operands. |
 | `/` | Division Operator       | "slash" or "over"     | Results to the **quotient** of dividing the left operand by the right operand. **Note:** *This operator truncates integer-only divisions.* |
-| `%` | **Advanced:** Modulus or Modulo       | "modulus" or "modulo" | Results to the **remainder** of clocking the left operand around the right operand. |
+| `%` | **Advanced:** Modulus or Modulo       | "modulus" or "modulo" | Results to the **remainder** of dividing the right operand by the left operand. **Note:** *This does not perform the strict mathematical definition of modulus.* |
+
+**Note:** *Exponent calculations are performed using the* `pow()` *function from C's* `math.h` *library.*
 
 We can assign variables to the results of an operation, and we can combine the printouts of a series of variables into a single `NSLog()`:
 
@@ -205,7 +207,7 @@ This will print: `ab: 7, cd: 60`.
 
 ### Increment and Decrement Operators
 
-The increment (`++`) and decrement (`--`) operators are quick ways to "step-up" or "step-down" a variable by one. They are very useful when using an integer variable as a counter.
+The increment (`++`) and decrement (`--`) operators are quick ways to "step-up" or "step-down" a variable by one. They are very useful when using an integer variable as a counter and are essentially a shorthand for `x = x + 1;` or `y = y - 1;`.
 
 | Symbol | Name               | Pronunciation | Description |
 |:------:|:-------------------|:--------------|:------------|
@@ -396,6 +398,8 @@ Highest  | `()` precedence override
          | `==` `!=`
 Lowest   | `=` `+=` `-=` `*=` `/=` `%=`
 
+**Top-tip:** *Most of the time you can simply follow the [PEMDAS](http://math.wikia.com/wiki/P.E.M.D.A.S) acronym.*
+
 #### Overriding Precedence
 
 Parentheses `(` `)` can be used to increase the priority of sub-calculation within a statement. If, as humans, we expected the operators in the formula `6 + 7 * 8 - 2` to have equal priority from left to right, we might add `6` and `7` to get `13`, then multiply by `8` to get `104`, and finally subtract `2` to get `102`. But writing this calculation in Objective-C gives a result of `60`:
@@ -493,5 +497,5 @@ Take care to use the Objective-C primitives in favor of the C-language primitive
 | `unsigned long`       | `NSUInteger` |
 | `unsigned long long`  | `NSUInteger` |
 
-**Advanced:** *The reason for this is so your application can dynamically handle being deployed to various device types that have different system architectures. That's a fancy way of saying that some older iPhones have 32-bit processors, while the newer ones have 64-bit processors. Binary word length matters to C primitives, but the Objective-C primitives intelligently chooses the correct binary-word-length C primitive to use.*
+**Advanced:** *The reason for this is so your application can dynamically handle being deployed to various device types that have different system architectures. That's a fancy way of saying that some older iPhones have 32-bit processors, while the newer ones have 64-bit processors. Binary word length matters to C primitives, but the Objective-C primitives intelligently choose fast and accurate binary-word-length C primitives to use.*
 
