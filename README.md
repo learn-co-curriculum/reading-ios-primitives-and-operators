@@ -193,7 +193,7 @@ NSInteger c = 3 * 4;
 NSInteger d = 21 / 3;
 NSInteger e = 13 % 7;
     
-NSLog(@"a: %li, b: %li, c: %li, d: %li e: %li", a, b, c, d, e);
+NSLog(@"a: %li, b: %li, c: %li, d: %li, e: %li", a, b, c, d, e);
 ```
 This will print: `a: 2, b: 5, c: 12, d: 7, e: 6`.
 
