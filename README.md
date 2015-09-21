@@ -180,7 +180,7 @@ In Objective-C, the symbols for these operators are:
 | `-` | Subtraction Operator    | "minus" or "subtract" | Results to the **difference** of subtracting the right operand from the left operand.  |
 | `*` | Multiplication Operator | "star" or "times"     | Results to the **product** of multiplying the two operands. |
 | `/` | Division Operator       | "slash" or "over"     | Results to the **quotient** of dividing the left operand by the right operand. **Note:** *This operator truncates integer-only divisions.* |
-| `%` | **Advanced:** Modulus or Modulo       | "modulus" or "modulo" | Results to the **remainder** of dividing the right operand by the left operand. **Note:** *This does not perform the strict mathematical definition of modulus.* |
+| `%` | **Advanced:** Modulus or Modulo       | "modulus" or "modulo" | Results to the **remainder** of dividing the left operand by the right operand. **Note:** *This does not perform the strict mathematical definition of modulus.* |
 
 **Note:** *Exponent calculations are performed using the* `pow()` *function from C's* `math.h` *library. The* `^` *operator has a different use than exponents.*
 
@@ -289,7 +289,7 @@ The assignment operators are in the following table:
 | `-=` | Subtract-and-assignment Operator | "minus equals"  | Assigns the variable to the left of the operator to the value of the **difference** between itself and the value or variable to the right of the operator. |
 | `*=` | Multiply-and-assignment Operator | "star equals"   | Assigns the variable to the left of the operator to the value of the **product** of multiplying itself with the value or variable to the right of the operator.
 | `/=` | Divide-and-assignment Operator   | "slash equals"  | Assigns the variable to the left of the operator to the value of the **quotient** of dividing itself by the value or variable to the right of the operator. **Note:** *This operator truncates integer-only divisions.*
-| `%=` | **Advanced:** Remainder-and-assignment Operator| "modulus equals" | Assigns the variable to the left of the operator to the value of the **remainder** of clocking that variable around the value or variable to the right of the operator.
+| `%=` | **Advanced:** Remainder-and-assignment Operator| "modulus equals" | Assigns the variable to the left of the operator to the value of the **remainder** of dividing that variable by the value or variable to the right of the operator.
 
 Add-and-assignment operator:
 
