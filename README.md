@@ -203,7 +203,7 @@ NSInteger cd = c * d;
     
 NSLog(@"ab: %li, cd: %li", ab, cd);
 ```
-This will print: `ab: 7, cd: 60`.
+This will print: `ab: 7, cd: 84`.
 
 ### Increment and Decrement Operators
 
