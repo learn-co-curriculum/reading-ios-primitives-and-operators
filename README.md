@@ -500,4 +500,4 @@ Take care to use the Objective-C primitives in favor of the C-language primitive
 **Advanced:** *The reason for this is so your application can dynamically handle being deployed to various device types that have different system architectures. That's a fancy way of saying that some older iPhones have 32-bit processors, while the newer ones have 64-bit processors. Binary word length matters to C primitives, but the Objective-C primitives intelligently choose fast and accurate binary-word-length C primitives to use.*
 
 
-<a href='https://learn.co/lessons/reading-ios-primitives-and-operators' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/reading-ios-primitives-and-operators' title='Primitives & Operators'>Primitives & Operators</a> on Learn.co and start learning to code for free.</p>
